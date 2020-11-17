@@ -1,0 +1,58 @@
+﻿@model ELearningProject_SoufianeJD.Models.student
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="/CssFile/style2.css">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+
+                @using (Html.BeginForm("SignUp", "Student", FormMethod.Post, new { @class = "login-form" }))
+                {
+                    <br/>
+                    <img src="~/Images/signuplogo.png">
+                    <br/>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Name</label>
+                        @Html.TextBoxFor(model => model.name, new { @type = "text", @class = "form-control", required = "required" })
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Last Name</label>
+                        @Html.TextBoxFor(model => model.lastname, new { @type = "text", @class = "form-control", required = "required" })
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Level</label>
+
+                        @Html.DropDownListFor(model => model.level, new[] {
+                        new SelectListItem() {Text = "Secondaire", Value ="1"},
+                        new SelectListItem() {Text = "Collegial", Value = "2"},
+                        new SelectListItem() {Text = "Universitaire", Value = "3"}
+                        }, "Choose an option", new { @class = "form-control" })
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                        @Html.TextBoxFor(model => model.email, new { @type = "text", @class = "form-control", required = "required" })
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    </div>
+
+                }
+                <span style="color:green">@ViewBag.accept</span>
+            </div>
+
+        
+        </div>
+        </div>

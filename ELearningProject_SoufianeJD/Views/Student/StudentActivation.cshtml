@@ -1,0 +1,38 @@
+﻿@model ELearningProject_SoufianeJD.Models.student
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "StudentActivation";
+}
+<link rel="stylesheet" type="text/css" href="/CssFile/style2.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 login-sec">
+            <h2 class="text-center">Temporary Username : @Session["id"]</h2>
+            <h2 class="text-center">Temporary Password : @Session["pw"]</h2>
+
+            @using (Html.BeginForm("StudentActivation", "Student", FormMethod.Post, new { @class = "login-form" }))
+            {
+                <img src="~/Images/aclogo.png">
+                <br />
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-uppercase">New Username</label>
+                    @Html.TextBoxFor(model => model.Id, new { @type = "text", @class = "form-control" })
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-uppercase">New Password</label>
+                    @Html.TextBoxFor(model => model.pw, new { @type = "password", @class = "form-control" })
+
+                </div>
+
+                <div class="form-check">
+
+                    <button type="submit" class="btn btn-login float-right">Submit</button>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ELearningDB" Class="ChatBoardStudentsLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ELearningDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ELearningDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.chatboardstudents" Member="chatboardstudents">
+    <Type Name="chatboardstudents">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sender" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="reciever" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="body" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chatboardteacher" Member="chatboardteachers">
+    <Type Name="chatboardteachers">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="student" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="teacher" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="body" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,20 @@
+﻿@model IQueryable<ELearningProject_SoufianeJD.Models.cours>
+@{
+    ViewBag.Title = "Home";
+
+}
+<br />
+<link rel="stylesheet" type="text/css" href="/CssFile/style.css">
+
+<img id="xx" src="~/Images/logosfjd.png">
+<img id="xx" src="~/Images/souhomelogo.png">
+<div class="jumbotron">
+    <h1>
+        E-learning Thot<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Platform
+    </h1>
+</div>
+
+<img id="x" style=" border-radius: 40%" src="@ViewBag.image" onerror="this.src='../profile/anonyme.jpg'" alt="">
+
+<h1> Welcome @ViewBag.user</h1>

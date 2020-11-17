@@ -1,0 +1,44 @@
+﻿@model ELearningProject_SoufianeJD.Models.student
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="/CssFile/style2.css">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+               
+
+                @using (Html.BeginForm("SignIn", "Student", FormMethod.Post, new { @class = "login-form" }))
+                {
+
+                <div class="form-group">
+                    <img src="~/Images/loginstudentlogo.png">
+                    <br/>
+
+                    <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+                    @Html.TextBoxFor(model => model.Id, new { @type = "text", @class = "form-control" })
+
+
+
+                </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                        @Html.TextBoxFor(model => model.pw, new { @type = "password", @class = "form-control" })
+
+                    </div>
+                    @Html.ValidationMessageFor(model => model.pw)
+
+                    <div class="form-check">
+                        
+                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    </div>
+
+                }
+                <br/>
+                <a href="signup" class="copy-text"> Sign Up if you're not a member !</a>
+            </div>
+           
+        </div>
+        </div>

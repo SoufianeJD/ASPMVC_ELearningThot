@@ -1,0 +1,18 @@
+body {
+ background-image: url("/Images/back.jpg");
+}
+
+#x {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#xx {
+	float: right;
+}
+h1 {
+	text-align: center;
+	color:white;
+}

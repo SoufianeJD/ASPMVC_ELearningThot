@@ -1,0 +1,49 @@
+﻿@model ELearningProject_SoufianeJD.Models.cours
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Cours";
+}
+
+    <div class="card" id="@Model.Id">
+        <div class="container-fliud">
+            <div class="wrapper row">
+
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="../CoursIMG/@(Model.Id).jpg" /></div>
+                    </div>
+                
+                </div>
+                <div class="details col-md-6">
+                    <h2 class="course-title"> @Model.Title </h2>
+                   
+                    <p class="course-description">
+                        @Model.Description
+                    </p>
+                    <h4 class="level">Level: <span style="color:green">  @ViewBag.level </span></h4>
+
+                    <h5 class="source">
+                        Added By:
+                        <span style="color:saddlebrown" clsource"size" data-toggle="tooltip" title="small">@Model.Owner</span>
+                    </h5>
+
+                    <div class="action">
+                        <button class="btn btn-info" type="button" data-toggle="modal" data-target="#myModal">Watch the tutorial</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              
+                <h4 class="modal-title" id="myModalLabel">@Model.Title</h4>
+              
+            </div>
+           
+                <iframe src="@Model.video" id="info" class="iframe" name="info" seamless="" height="400" width="800"></iframe>    
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@model ELearningProject_SoufianeJD.Models.cours
+
+@{
+    ViewBag.Title = "AddANEWClass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="/CssFile/style3.css">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+
+                @using (Html.BeginForm("AddANEWClasss", "Teacher", FormMethod.Post, new { @class = "login-form", enctype = "multipart/form-data" }))
+                {
+                <div>
+                    <br /><br /> <br />
+                    <label>Title</label>
+                    @Html.TextBoxFor(model => model.Title, new { @type = "text", @class = "form-control", required = "required" })
+
+
+                </div>
+
+                    <div><br />
+                        <label>Description</label>
+                        @Html.TextAreaFor(model => model.Description, 10, 30, new { @type = "text", @class = "form-control", required = "required" })
+
+
+                    </div>
+
+                    <div><br />
+                        <label>Level</label>
+
+                        @Html.DropDownListFor(model => model.Level, new[] {
+                        new SelectListItem() {Text = "Secondaire", Value ="1"},
+                        new SelectListItem() {Text = "Collegial", Value = "2"},
+                        new SelectListItem() {Text = "Universitaire", Value = "3"}
+                        }, "Choose your level", new { @class = "form-control" })
+
+
+                    </div>
+
+                    <div><br />
+                        <label>The video link</label>
+                        @Html.TextBoxFor(model => model.video, new { @type = "text", @class = "form-control", required = "required" })
+
+                    </div>
+
+                    <div><br />
+                        <label>Upload image</label>
+                        <input type='file' name='file' />
+                    </div>
+
+
+                    <div class="form-check">
+                        <br />
+                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    </div>
+
+                }
+                <span style="color:green">@ViewBag.accept</span>
+            </div>
+            <div class="col-md-6">
+                <br/><br />
+                <img src="~/Images/addnewcourse.png">
+            </div>
+        </div>
+        </div>

@@ -1,0 +1,47 @@
+﻿
+@model ELearningProject_SoufianeJD.Models.inscriptionT
+
+@{
+    ViewBag.Title = "Liste Cours";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="/CssFile/style3.css">
+<!-- Portfolio Section -->
+
+    <div class="container">
+
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">📚Available courses📚</h2>
+  
+        <div class="row">
+            <!-- Portfolio Item 1 -->
+            @foreach (ELearningProject_SoufianeJD.Models.cours e in ViewBag.listecours)
+            {
+
+
+
+
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+
+                        <img src="../coursIMG/@(e.Id).jpg" />
+
+                        <div class="card-content">
+                            <h4 class="card-title">@e.Title</h4>
+
+                            <p class="">
+                                <span style="float:right"> <strong> Added by: @e.Owner </strong></span>
+                            </p>
+                        </div>
+                        <div class="card-read-more">
+                            <a href="LesCours?id=@e.Id" class="btn btn-link btn-block">
+                                💬  About it
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        </div>

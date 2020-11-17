@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ChatBoardStudentsLinq">
+  <DataContextMoniker Name="/ChatBoardStudentsLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3738e425-5dc1-4f22-9644-7f0edd207f35" absoluteBounds="3.375, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ChatBoardStudentsLinqDataContext/chatboardstudents" />
+      <nestedChildShapes>
+        <elementListCompartment Id="695d49ec-c691-47aa-9db5-34afaa9c13fb" absoluteBounds="3.39, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e50d781-ebe7-4561-99a6-8217a3dc44eb" absoluteBounds="0.875, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ChatBoardStudentsLinqDataContext/chatboardteachers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad0ea93a-98f6-4167-9d34-9f6025e02302" absoluteBounds="0.89000000000000012, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

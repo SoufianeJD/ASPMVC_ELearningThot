@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ELearningDB" Class="ELearningLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ELearningDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ELearningDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student">
+      <Column Name="Id" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="[level]" Member="level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pw" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="student_comment" Member="comments" ThisKey="Id" OtherKey="student" Type="comment" />
+      <Association Name="student_inscription" Member="inscriptions" ThisKey="Id" OtherKey="student" Type="inscription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comments" Member="comments">
+    <Type Name="comment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="student" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="cours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="body" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="student_comment" Member="student1" ThisKey="student" OtherKey="Id" Type="student" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="cours_comment" Member="cours1" ThisKey="cours" OtherKey="Id" Type="cours" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.teacher" Member="teachers">
+    <Type Name="teacher">
+      <Column Name="Id" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="pw" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="teacher_inscriptionT" Member="inscriptionTs" ThisKey="Id" OtherKey="teacher" Type="inscriptionT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cours" Member="cours">
+    <Type Name="cours">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="video" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="cours_comment" Member="comments" ThisKey="Id" OtherKey="cours" Type="comment" />
+      <Association Name="cours_inscription" Member="inscriptions" ThisKey="Id" OtherKey="cours" Type="inscription" />
+      <Association Name="cours_inscriptionT" Member="inscriptionTs" ThisKey="Id" OtherKey="cours" Type="inscriptionT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.inscription" Member="inscriptions">
+    <Type Name="inscription">
+      <Column Name="cours" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="student" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="cours_inscription" Member="cours1" ThisKey="cours" OtherKey="Id" Type="cours" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="student_inscription" Member="student1" ThisKey="student" OtherKey="Id" Type="student" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.inscriptionT" Member="inscriptionTs">
+    <Type Name="inscriptionT">
+      <Column Name="cours" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="teacher" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="cours_inscriptionT" Member="cours1" ThisKey="cours" OtherKey="Id" Type="cours" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="teacher_inscriptionT" Member="teacher1" ThisKey="teacher" OtherKey="Id" Type="teacher" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
