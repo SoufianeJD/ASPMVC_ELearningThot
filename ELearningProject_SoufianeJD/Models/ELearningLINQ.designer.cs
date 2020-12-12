@@ -906,10 +906,10 @@ namespace ELearningProject_SoufianeJD.Models
 		private string _video;
 		
 		private string _img;
+
+		public int status = 0;
 		
 		private string _Level;
-
-		public int status = 1;
 		
 		private EntitySet<comment> _comments;
 		

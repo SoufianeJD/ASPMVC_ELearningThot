@@ -46,14 +46,14 @@
         <elementListCompartment Id="77515a61-6eb0-43cc-a573-ce2ec05f892e" absoluteBounds="6.39, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 6.20274983723958); (7.375 : 6.20274983723958); (7.375 : 4.44399251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 6.20274983723958); (7.375 : 6.20274983723958); (7.375 : 4.44399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ELearningLINQDataContext/cours/cours_inscription" />
       <nodes>
         <classShapeMoniker Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" />
         <classShapeMoniker Id="87e8bd24-10c0-4845-b806-1bcbd872ec8b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 2.782900390625); (5.44791666666667 : 2.782900390625 : JumpStart); (5.61458333333333 : 2.782900390625 : JumpEnd); (7.25 : 2.782900390625); (7.25 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 2.782900390625); (7.25 : 2.782900390625); (7.25 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ELearningLINQDataContext/student/student_inscription" />
       <nodes>
         <classShapeMoniker Id="894ec2d2-da1d-4998-b690-1b6ca969f35b" />
@@ -66,14 +66,14 @@
         <elementListCompartment Id="53c5a0bb-e436-4933-b5c9-77c7b2881014" absoluteBounds="4.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 5.63262241861979); (5.53125 : 5.63262241861979); (5.53125 : 1.94399251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 5.63262241861979); (5.53125 : 5.63262241861979); (5.53125 : 1.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ELearningLINQDataContext/cours/cours_inscriptionT" />
       <nodes>
         <classShapeMoniker Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" />
         <classShapeMoniker Id="7f0e2cbf-92cd-47b0-b617-6e05e686abf6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.75 : 1.34699625651042); (6.75 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.75 : 1.34699625651042); (6.75 : 1.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ELearningLINQDataContext/teacher/teacher_inscriptionT" />
       <nodes>
         <classShapeMoniker Id="435719d3-9c3d-461c-b15c-9d4a571b1783" />
