@@ -27,13 +27,13 @@
         <elementListCompartment Id="41f6cf1f-076e-4a8e-9fe6-0d6c826a70ac" absoluteBounds="7.765, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" absoluteBounds="0.5, 5.125, 2, 2.1554996744791666">
+    <classShape Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" absoluteBounds="2.75, 3.5, 2, 2.1554996744791666">
       <DataClassMoniker Name="/ELearningLINQDataContext/cours" />
       <nestedChildShapes>
-        <elementListCompartment Id="f3a5e419-7a2e-423e-8d35-626451c0c901" absoluteBounds="0.515, 5.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f3a5e419-7a2e-423e-8d35-626451c0c901" absoluteBounds="2.765, 3.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.5 : 5.125); (1.5 : 4.89589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 4.19794840494792); (2.5 : 4.19794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ELearningLINQDataContext/cours/cours_comment" />
       <nodes>
         <classShapeMoniker Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" />
@@ -46,14 +46,14 @@
         <elementListCompartment Id="77515a61-6eb0-43cc-a573-ce2ec05f892e" absoluteBounds="6.39, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 6.20274983723958); (7.375 : 6.20274983723958); (7.375 : 4.44399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.75 : 3.97199625651042); (6.375 : 3.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ELearningLINQDataContext/cours/cours_inscription" />
       <nodes>
         <classShapeMoniker Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" />
         <classShapeMoniker Id="87e8bd24-10c0-4845-b806-1bcbd872ec8b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 2.782900390625); (7.25 : 2.782900390625); (7.25 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.5 : 2.782900390625); (3.63541666666667 : 2.782900390625 : JumpStart); (3.80208333333333 : 2.782900390625 : JumpEnd); (7.25 : 2.782900390625); (7.25 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ELearningLINQDataContext/student/student_inscription" />
       <nodes>
         <classShapeMoniker Id="894ec2d2-da1d-4998-b690-1b6ca969f35b" />
@@ -66,7 +66,7 @@
         <elementListCompartment Id="53c5a0bb-e436-4933-b5c9-77c7b2881014" absoluteBounds="4.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 5.63262241861979); (5.53125 : 5.63262241861979); (5.53125 : 1.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.71875 : 3.5); (3.71875 : 1.34699625651042); (4.75 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ELearningLINQDataContext/cours/cours_inscriptionT" />
       <nodes>
         <classShapeMoniker Id="957ff815-e811-4e06-b4f0-afd8adf7fca5" />

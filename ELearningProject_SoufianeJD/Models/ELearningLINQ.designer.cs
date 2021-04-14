@@ -902,12 +902,12 @@ namespace ELearningProject_SoufianeJD.Models
 		private string _Description;
 		
 		private string _Owner;
+
+		public int status = 0;
 		
 		private string _video;
 		
 		private string _img;
-
-		public int status = 0;
 		
 		private string _Level;
 		

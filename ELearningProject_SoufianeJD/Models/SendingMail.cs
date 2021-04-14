@@ -18,8 +18,8 @@ namespace ELearningProject_SoufianeJD.Models
         {
             try
             {
-                string MailSender = "s.f.j.dsapro@gmail.com";
-                string MailPw = "PIRATERlmoklfacein1998";
+                string MailSender = "urmail@gmail.com";
+                string MailPw = "urpassword";
 
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.EnableSsl = true;
